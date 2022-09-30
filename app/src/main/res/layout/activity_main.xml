@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|end"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/id_image_top"
+        android:layout_width="419dp"
+        android:layout_height="92dp"
+        android:foregroundGravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_wavetop" />
+
+    <ImageView
+        android:id="@+id/id_image_bottom"
+        android:layout_width="410dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_join"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_wavebottom" />
+
+    <TextView
+        android:id="@+id/id_login"
+        android:layout_width="127dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="142dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/id_image_top"
+        app:layout_constraintEnd_toEndOf="@+id/id_image_top"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="@+id/id_image_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/id_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bem-vindo!"
+        android:textColor="#1976D2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_image_top" />
+
+    <TextView
+        android:id="@+id/id_text_1"
+        android:layout_width="259dp"
+        android:layout_height="42dp"
+        android:text="Com o nosso aplicativo será muito mais fácil e divertido manter o controle dos seus games!"
+        android:textColor="#A8A8A8"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/id_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_welcome" />
+
+    <ImageView
+        android:id="@+id/id_line_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/id_welcome"
+        app:layout_constraintEnd_toStartOf="@+id/id_welcome"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/id_welcome"
+        app:srcCompat="@drawable/ic_line" />
+
+    <ImageView
+        android:id="@+id/id_line_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/id_welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toEndOf="@+id/id_welcome"
+        app:layout_constraintTop_toTopOf="@+id/id_welcome"
+        app:srcCompat="@drawable/ic_line" />
+
+    <EditText
+        android:id="@+id/id_email"
+        android:layout_width="290dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="136dp"
+        android:background="@drawable/background_edittext"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawableTint="@color/purple_500"
+        android:ems="10"
+        android:hint="@string/email1"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10sp"
+        app:flow_horizontalGap="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_welcome" />
+
+    <EditText
+        android:id="@+id/id_password"
+        android:layout_width="290dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/background_edittext"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawableTint="@color/purple_500"
+        android:ems="10"
+        android:hint="@string/key1"
+        android:inputType="textPassword"
+        android:paddingStart="10sp"
+        app:flow_horizontalGap="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_email" />
+
+    <TextView
+        android:id="@+id/id_development"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Desenvolvido por DS2M"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/id_image_bottom" />
+
+    <Button
+        android:id="@+id/id_join"
+        android:layout_width="294dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Entrar"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_password" />
+
+    <CheckBox
+        android:id="@+id/id_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:text="Lembrar-me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_password" />
+
+    <TextView
+        android:id="@+id/id_create_accont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="44dp"
+        android:text="Criar uma conta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_join" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

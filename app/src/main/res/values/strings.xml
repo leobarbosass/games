@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">games</string>
+    <string name="login1">Login</string>
+    <string name="welcome1">Bem-vindo!</string>
+    <string name="text1">Com o nosso aplicativo será muito mais fácil e divertido manter o controle dos seus games!</string>
+    <string name="email1">E-mail</string>
+    <string name="key1">Senha</string>
+    <string name="remember1">Lembrar-me</string>
+    <string name="join1">Entrar</string>
+    <string name="create1">Criar uma conta</string>
+    <string name="development1">Desenvolvido por DS2M</string>
+
+    <string name="games">Games</string>
+    <string name="new_accont">Nova Conta</string>
+    <string name="picture">Vamos escolher uma foto?</string>
+    <string name="data">Dados para autenticação</string>
+    <string name="email2">E-mail</string>
+    <string name="key2">Senha</string>
+    <string name="data_people">Dados Pessoais</string>
+    <string name="name">Qual o seu nome?</string>
+    <string name="city">Qual é a sua cidade?</string>
+    <string name="birth">Data de nascimento</string>
+    <string name="level">Qual o seu nível gamer?</string>
+    <string name="console">Qual o seu console preferido?</string>
+    <string name="sex">Sexo:</string>
+    <string name="gamess">Games</string>
+</resources>
