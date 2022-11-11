@@ -12,11 +12,15 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.301" />
         <entry key="app/src/main/res/drawable/ic_line.xml" value="0.324" />
         <entry key="app/src/main/res/drawable/ic_wavetop.xml" value="0.301" />
+        <entry key="app/src/main/res/drawable/img_logo_background.xml" value="0.302" />
         <entry key="app/src/main/res/drawable/rectangle.xml" value="0.301" />
-        <entry key="app/src/main/res/layout/activity_2.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_2.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_3.xml" value="0.5072916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.44947916666666665" />
         <entry key="app/src/main/res/menu/menu_new_user.xml" value="0.4484375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/img_logo.xml" value="0.288" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/img_logo_round.xml" value="0.288" />
       </map>
     </option>
   </component>

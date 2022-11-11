@@ -20,15 +20,14 @@
 
     <ImageView
         android:id="@+id/id_image_bottom"
-        android:layout_width="410dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="413dp"
+        android:layout_height="95dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_join"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount"
+        app:layout_constraintVertical_bias="0.761"
         app:srcCompat="@drawable/ic_wavebottom" />
 
     <TextView
@@ -42,7 +41,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/id_image_top"
         app:layout_constraintEnd_toEndOf="@+id/id_image_top"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.593"
         app:layout_constraintStart_toStartOf="@+id/id_image_top"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -51,7 +50,7 @@
         android:id="@+id/id_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:text="Bem-vindo!"
         android:textColor="#1976D2"
         android:textSize="24sp"
@@ -65,12 +64,11 @@
         android:id="@+id/id_text_1"
         android:layout_width="259dp"
         android:layout_height="42dp"
+        android:layout_marginTop="52dp"
         android:text="Com o nosso aplicativo será muito mais fácil e divertido manter o controle dos seus games!"
         android:textColor="#A8A8A8"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/id_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_welcome" />
 
@@ -100,7 +98,7 @@
         android:id="@+id/id_email"
         android:layout_width="290dp"
         android:layout_height="51dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/background_edittext"
         android:drawableStart="@drawable/ic_baseline_email_24"
         android:drawableTint="@color/purple_500"
@@ -112,13 +110,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_welcome" />
+        app:layout_constraintTop_toBottomOf="@+id/id_text_1" />
 
     <EditText
         android:id="@+id/id_password"
         android:layout_width="290dp"
         android:layout_height="51dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/background_edittext"
         android:drawableStart="@drawable/ic_baseline_lock_24"
         android:drawableTint="@color/purple_500"
@@ -147,7 +145,7 @@
         android:id="@+id/id_join"
         android:layout_width="294dp"
         android:layout_height="60dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="sans-serif-black"
         android:text="Entrar"
         android:textSize="20sp"
@@ -155,23 +153,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_password" />
+        app:layout_constraintTop_toBottomOf="@+id/id_remember" />
 
     <CheckBox
         android:id="@+id/id_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="52dp"
         android:text="Lembrar-me"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_password" />
 
     <TextView
-        android:id="@+id/id_create_accont"
+        android:id="@+id/createAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="44dp"
         android:text="Criar uma conta"
         app:layout_constraintEnd_toEndOf="parent"

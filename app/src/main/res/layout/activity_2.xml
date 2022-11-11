@@ -8,12 +8,16 @@
     tools:context=".MainActivity2">
 
     <ScrollView
-        android:layout_width="421dp"
-        android:layout_height="1031dp"
-        android:layout_marginTop="36dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="412dp"
+        android:layout_height="751dp"
         android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-5dp">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -21,10 +25,23 @@
 
             <ImageView
                 android:id="@+id/id_waves_topp"
-                android:layout_width="420dp"
-                android:layout_height="111dp"
+                android:layout_width="467dp"
+                android:layout_height="125dp"
                 android:src="@drawable/ic_waves"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="-27dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider"
+                android:layout_width="219dp"
+                android:layout_height="49dp"
+                android:stepSize="1"
+                android:valueFrom="1"
+                android:valueTo="27"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.196"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_level_gamer" />
 
             <TextView
                 android:id="@+id/id_new_accont"
@@ -90,7 +107,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/id_chose_picture_text" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/id_lockk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -102,7 +119,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/id_person" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/id_dados_for"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -112,11 +129,11 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.044"
-                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/id_lockk"
                 app:layout_constraintTop_toBottomOf="@+id/id_person" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/id_text_email"
                 android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -126,10 +143,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintTop_toBottomOf="@+id/id_dados_for" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/id_keytwo"
                 android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -139,10 +156,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+                app:layout_constraintTop_toBottomOf="@+id/id_text_email" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/id_little_people"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -150,10 +167,10 @@
                 android:src="@drawable/ic_baseline_person_24"
                 android:tint="#0099FF"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+                app:layout_constraintTop_toBottomOf="@+id/id_keytwo" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/id_data"
                 android:layout_width="147dp"
                 android:layout_height="23dp"
                 android:layout_marginTop="48dp"
@@ -163,11 +180,11 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.038"
-                app:layout_constraintStart_toEndOf="@+id/imageView10"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+                app:layout_constraintStart_toEndOf="@+id/id_little_people"
+                app:layout_constraintTop_toBottomOf="@+id/id_keytwo" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/id_level_gamer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -177,23 +194,23 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.19"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+                app:layout_constraintTop_toBottomOf="@+id/id_date" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/id_console_fav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="16dp"
                 android:hint="@string/console"
                 android:text="Qual o seu console favorito?"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.22"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+                app:layout_constraintTop_toBottomOf="@+id/slider" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/id_name_adress"
                 android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -203,10 +220,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.511"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintTop_toBottomOf="@+id/id_data" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/id_city"
                 android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -216,10 +233,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.511"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+                app:layout_constraintTop_toBottomOf="@+id/id_name_adress" />
 
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/id_date"
                 android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -228,65 +245,73 @@
                 android:inputType="date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+                app:layout_constraintTop_toBottomOf="@+id/id_city" />
 
-            <SeekBar
-                android:id="@+id/seekBar"
-                android:layout_width="215dp"
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="338dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="16dp"
+                android:entries="@array/console"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.208"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                app:layout_constraintTop_toBottomOf="@+id/id_console_fav" />
+
+            <RadioButton
+                android:id="@+id/id_masc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="72dp"
+                android:text="Masculino"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_sex" />
+
+            <RadioButton
+                android:id="@+id/id_fem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="Feminino"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_sex" />
+
+            <TextView
+                android:id="@+id/id_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:text="Sexo"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <ImageView
+                android:id="@+id/id_image_bottom2"
+                android:layout_width="461dp"
+                android:layout_height="154dp"
+                android:layout_marginTop="8dp"
+                android:rotation="180"
+                android:src="@drawable/ic_wavetop"
+                app:layout_constraintTop_toBottomOf="@+id/id_masc"
+                tools:layout_editor_absoluteX="-17dp" />
+
+            <TextView
+                android:id="@+id/text_nivel_gamer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:text="Noob"
+                android:textColor="@color/purple_500"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/slider"
+                app:layout_constraintStart_toEndOf="@+id/slider"
+                app:layout_constraintTop_toTopOf="@+id/slider"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <ImageView
-        android:id="@+id/id_rectangle"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_rec"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-55dp" />
-
-    <TextView
-        android:id="@+id/id_text_gam"
-        android:layout_width="77dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/gamess"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/id_left"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/id_left"
-        android:layout_width="26dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/ic_baseline_chevron_left_24"
-        android:tint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/id_rectangle"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/id_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/ic_baseline_save_24"
-        android:tint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/id_rectangle"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

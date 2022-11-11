@@ -24,4 +24,15 @@
     <string name="console">Qual o seu console preferido?</string>
     <string name="sex">Sexo:</string>
     <string name="gamess">Games</string>
+
+    <string-array name="console">
+        <item>Playstation 5</item>
+        <item>Playstation 4</item>
+        <item>Playstation 3</item>
+        <item>Xbox One</item>
+        <item>Xbox 360</item>
+        <item>Nintendo Switch</item>
+        <item>Nintendo 64</item>
+        <item>Sega Saturn</item>
+    </string-array>
 </resources>
