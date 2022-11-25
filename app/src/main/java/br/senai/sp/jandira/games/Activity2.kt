@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
+import br.senai.sp.jandira.games.model.NiveisEnum
 import br.senai.sp.jandira.games.model.User
 
 class Activity2 : AppCompatActivity() {
@@ -16,6 +15,7 @@ class Activity2 : AppCompatActivity() {
     lateinit var editPassword: EditText
     lateinit var editDate: EditText
     lateinit var editCity: EditText
+    val user = User ()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,14 +28,12 @@ class Activity2 : AppCompatActivity() {
         editPassword = findViewById(R.id.id_keytwo)
         editDate = findViewById(R.id.id_date)
         editCity = findViewById(R.id.id_city)
-
+        seekBar()
     }
 
     //Classe = receita
     private fun saveUser() {
         //construção do objeto usuário:
-        val user = User ()
-
         user.codigo = 1
         user.nome = editName.text.toString()
         user.email = editEmail.text.toString()
@@ -88,5 +86,45 @@ class Activity2 : AppCompatActivity() {
         return true
     }
 
+
+    private fun seekBar(){
+
+        var seekBar: SeekBar
+        var level: TextView = findViewById(R.id.level)
+        seekBar = findViewById(R.id.seekBar)
+
+        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, p2: Boolean) {
+
+                if (progress > 24 && progress < 50){
+
+                    level.setText("basico")
+                    user.nivel = NiveisEnum.BASICO
+                }
+                else if (progress > 49 && progress < 76){
+
+                    level.setText("intermediario")
+                    user.nivel = NiveisEnum.INTERMEDIARIO
+                }
+                else if (progress > 75 && progress < 101) {
+
+                    level.setText("avancado")
+                    user.nivel = NiveisEnum.AVANCADO
+                }
+                else  {
+
+                    level.setText("casual")
+                }
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }
+
+        })
+    }
 }
 

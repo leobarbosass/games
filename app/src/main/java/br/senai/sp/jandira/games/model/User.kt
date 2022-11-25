@@ -12,7 +12,7 @@ class User {
     var cidade = ""
     var foto: Bitmap? = null // para ser nulo tem que ter ?
     var sexo = "I" // no caso do char tem que passar alguma coisa || CHAR é so um caracter
-    var nivel = NiveisEnum.INICIANTE
+    var nivel = NiveisEnum.BASICO
     var console: Console? = null
 
 }

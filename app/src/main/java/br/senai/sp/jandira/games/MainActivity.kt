@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.SeekBar
+import android.widget.TextView
 import android.widget.Toast
 import br.senai.sp.jandira.games.databinding.ActivityMainBinding
+import br.senai.sp.jandira.games.model.NiveisEnum
+import br.senai.sp.jandira.games.model.User
 
 class MainActivity : AppCompatActivity() {
 
@@ -65,6 +69,7 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
+
 
 }
 

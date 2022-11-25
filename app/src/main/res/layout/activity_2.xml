@@ -31,13 +31,13 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="-27dp" />
 
-            <com.google.android.material.slider.Slider
-                android:id="@+id/slider"
+            <SeekBar
+                android:id="@+id/seekBar"
                 android:layout_width="219dp"
                 android:layout_height="49dp"
                 android:stepSize="1"
                 android:valueFrom="1"
-                android:valueTo="27"
+                android:valueTo="100"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.196"
                 app:layout_constraintStart_toStartOf="parent"
@@ -207,7 +207,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.22"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/slider" />
+                app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
             <EditText
                 android:id="@+id/id_name_adress"
@@ -299,16 +299,16 @@
                 tools:layout_editor_absoluteX="-17dp" />
 
             <TextView
-                android:id="@+id/text_nivel_gamer"
+                android:id="@+id/level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:text="Noob"
+                android:layout_marginStart="16dp"
+                android:text="@string/level_type"
                 android:textColor="@color/purple_500"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toBottomOf="@+id/slider"
-                app:layout_constraintStart_toEndOf="@+id/slider"
-                app:layout_constraintTop_toTopOf="@+id/slider"
+                app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+                app:layout_constraintStart_toEndOf="@+id/seekBar"
+                app:layout_constraintTop_toTopOf="@+id/seekBar"
                 app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
