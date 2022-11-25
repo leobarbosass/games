@@ -41,19 +41,19 @@ class MainActivity : AppCompatActivity() {
             val email = binding.idEmail.text.toString()
             val password = binding.idPassword.text.toString()
 
-            //Passo 1 = Obter instäncia do SharedPreferences
-            val dados = getSharedPreferences("dados", MODE_PRIVATE)
-            val emailShared = dados.getString("email", "Email não encontrado")
-            val passShared = dados.getString("password", "Senha não encontrada")
-
-            //verificar se os dados de autentocação estão corretos
-            if(email == emailShared && password == passShared) {
-                val openActivity3 = Intent(this, Activity3::class.java)
-
-                startActivity(openActivity3)
-            }else{
-                Toast.makeText(this, "Authentication Failed", Toast.LENGTH_SHORT).show()
-            }
+//            //Passo 1 = Obter instäncia do SharedPreferences
+//            val dados = getSharedPreferences("dados", MODE_PRIVATE)
+//            val emailShared = dados.getString("email", "Email não encontrado")
+//            val passShared = dados.getString("password", "Senha não encontrada")
+//
+//            //verificar se os dados de autentocação estão corretos
+//            if(email == emailShared && password == passShared) {
+//                val openActivity3 = Intent(this, Activity3::class.java)
+//
+//                startActivity(openActivity3)
+//            }else{
+//                Toast.makeText(this, "Authentication Failed", Toast.LENGTH_SHORT).show()
+//            }
         }
 
     }

@@ -1,15 +1,18 @@
 package br.senai.sp.jandira.games.model
 
 import android.graphics.Bitmap
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tbl_console")
-class Console {
+@Entity(tableName = "tbl_games")
+class Game {
 
     @PrimaryKey(autoGenerate = true) var codigo = 0
     var nome = ""
-    var fabricante = ""
+    var titulo = ""
     var descricao = ""
-    var anoLancamento = 0
+    var estudio = ""
+    @ColumnInfo (name = "ano_lancamento")var anoLancamento = ""
+    var statusGame = ""
 }

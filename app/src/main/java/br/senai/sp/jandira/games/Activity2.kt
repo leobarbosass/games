@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
+import br.senai.sp.jandira.games.model.Game
 import br.senai.sp.jandira.games.model.NiveisEnum
 import br.senai.sp.jandira.games.model.User
+import br.senai.sp.jandira.games.repository.GamesRepository
 
 class Activity2 : AppCompatActivity() {
     lateinit var editName: EditText
@@ -15,6 +17,7 @@ class Activity2 : AppCompatActivity() {
     lateinit var editPassword: EditText
     lateinit var editDate: EditText
     lateinit var editCity: EditText
+    private var codigo = 0
     val user = User ()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,35 +36,51 @@ class Activity2 : AppCompatActivity() {
 
     //Classe = receita
     private fun saveUser() {
+
+        val user = User()
+
         //construção do objeto usuário:
-        user.codigo = 1
+        user.codigo = 0
         user.nome = editName.text.toString()
         user.email = editEmail.text.toString()
         user.senha = editPassword.text.toString()
         user.cidade = editCity.text.toString()
 
+        var GamesRepository = GamesRepository(this)
+
+        if (codigo > 0){
+            user.codigo = codigo
+            GamesRepository.saveUser(user)
+        }else{
+            codigo = GamesRepository.saveUser(user).toInt()
+        }
+
+        Toast.makeText(this, "CODIGO: $codigo", Toast.LENGTH_LONG).show()
+
+        finish()
+
         //Gravar usuário com SharedPreferences
         //Passo 1 = Obter instäncia do SharedPreferences
-        val dados = getSharedPreferences("dados", MODE_PRIVATE)
-
-        //Passo 2 = Criar um editor para o arquivo
-        val editor = dados.edit()
-
-        //Passo 3 = Inserindo dados no arquivo
-        editor.putInt("id", user.codigo)
-        editor.putString("name", user.nome)
-        editor.putString("email", user.email)
-        editor.putString("password", user.senha)
-
-        //commit(devolve um boolean) = executar gravação
-        if(editor.commit()){
-            Toast.makeText(this, "Usuario registrado com sucesso", Toast.LENGTH_SHORT).show()
-
-            //Fecha a activity
-            finish()
-        }else{
-            Toast.makeText(this, "Falha na criacao de registro do usuario", Toast.LENGTH_SHORT).show()
-        }
+//        val dados = getSharedPreferences("dados", MODE_PRIVATE)
+//
+//        //Passo 2 = Criar um editor para o arquivo
+//        val editor = dados.edit()
+//
+//        //Passo 3 = Inserindo dados no arquivo
+//        editor.putInt("id", user.codigo)
+//        editor.putString("name", user.nome)
+//        editor.putString("email", user.email)
+//        editor.putString("password", user.senha)
+//
+//        //commit(devolve um boolean) = executar gravação
+//        if(editor.commit()){
+//            Toast.makeText(this, "Usuario registrado com sucesso", Toast.LENGTH_SHORT).show()
+//
+//            //Fecha a activity
+//            finish()
+//        }else{
+//            Toast.makeText(this, "Falha na criacao de registro do usuario", Toast.LENGTH_SHORT).show()
+//        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
