@@ -11,6 +11,9 @@ class GamesRepository(context: Context) {
     fun saveUser(user: User) : Long{
         return db.save(user)
     }
+    fun login(email:String,senha:String):User{
+        return db.getLogin(email,senha)
+    }
     fun save (game : Game): Long {
         return db.save(game)
     }

@@ -23,5 +23,7 @@ interface GamesDAO {
 
     @Query("SELECT * FROM TBL_GAMES order by nome " ) fun getAll(): List <Game>
 
+    @Query("SELECT * FROM TBL_USER WHERE email = :email and senha= :senha") fun getLogin(email:String,senha:String):User
+
     @Query("SELECT * FROM TBL_GAMES WHERE codigo = :codigo") fun getGameById(codigo:Int) : Game
 }

@@ -8,9 +8,14 @@ import android.view.MenuItem
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.jandira.games.databinding.ActivityMainBinding
 import br.senai.sp.jandira.games.model.NiveisEnum
 import br.senai.sp.jandira.games.model.User
+import br.senai.sp.jandira.games.adapter.holderAdapter
+import br.senai.sp.jandira.games.dao.holderDAO
+import br.senai.sp.jandira.games.repository.GamesRepository
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,12 +39,24 @@ class MainActivity : AppCompatActivity() {
         binding.idJoin.setOnClickListener {
             login()
         }
+
     }
 
     private fun login() {
-        if(validar()){
             val email = binding.idEmail.text.toString()
             val password = binding.idPassword.text.toString()
+            val db = GamesRepository(this)
+
+        val login = db.login(email, password)
+
+        if (login != null) {
+            val startGames = Intent(this, Activity3::class.java)
+            startActivity(startGames)
+
+
+        }else {
+            Toast.makeText(this, "erro", Toast.LENGTH_SHORT)
+        }
 
 //            //Passo 1 = Obter instäncia do SharedPreferences
 //            val dados = getSharedPreferences("dados", MODE_PRIVATE)
@@ -55,23 +72,23 @@ class MainActivity : AppCompatActivity() {
 //                Toast.makeText(this, "Authentication Failed", Toast.LENGTH_SHORT).show()
 //            }
         }
-
-    }
-
-    private fun validar(): Boolean {
-        if(binding.idEmail.text.isEmpty()){
-            binding.idEmail.error = "Email is required"
-            return false
-        }
-        if(binding.idPassword.text.isEmpty()){
-            binding.idPassword.error = "Password is required"
-            return false
-        }
-        return true
     }
 
 
-}
+//    private fun validar(): Boolean {
+//        if(binding.idEmail.text.isEmpty()){
+//            binding.idEmail.error = "Email is required"
+//            return false
+//        }
+//        if(binding.idPassword.text.isEmpty()){
+//            binding.idPassword.error = "Password is required"
+//            return false
+//        }
+//        return true
+//    }
+//
+//
+//}
 
 
 

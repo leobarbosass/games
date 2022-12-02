@@ -17,8 +17,8 @@
         <entry key="app/src/main/res/drawable/img_logo_background.xml" value="0.302" />
         <entry key="app/src/main/res/drawable/rectangle.xml" value="0.301" />
         <entry key="app/src/main/res/layout/activity_2.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_3.xml" value="0.625" />
-        <entry key="app/src/main/res/layout/activity_holder.xml" value="0.3927083333333333" />
+        <entry key="app/src/main/res/layout/activity_3.xml" value="0.3185840707964602" />
+        <entry key="app/src/main/res/layout/activity_holder.xml" value="0.30857142857142855" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.44947916666666665" />
         <entry key="app/src/main/res/menu/menu_new_game.xml" value="0.5911458333333334" />
@@ -33,5 +33,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3927083333333333" />
+      </ProjectState>
+    </option>
   </component>
 </project>

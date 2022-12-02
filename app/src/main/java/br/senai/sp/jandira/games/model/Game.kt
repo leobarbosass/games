@@ -13,6 +13,7 @@ class Game {
     var titulo = ""
     var descricao = ""
     var estudio = ""
+    var foto = ""
     @ColumnInfo (name = "ano_lancamento")var anoLancamento = ""
     var statusGame = ""
 }
